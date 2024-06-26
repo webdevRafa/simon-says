@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  background-color: #000;
+  background-color: #000000ee;
   padding: 40px;
 }
 
@@ -64,16 +64,17 @@ h1 {
   grid-template-columns: 200px 200px;
   grid-gap: 5px;
   margin: 20px;
+  
 }
 
 .pad-red {
   border-top-left-radius: 200px;
-  background-color: red;
+  background-color: rgb(155, 12, 12);
 }
 
 .pad-red:hover,
 .pad-red:focus {
-  background-color: #ff451a;
+  background-color: #ff7b5d;
   transform: rotate(-5deg);
 }
 
@@ -85,7 +86,7 @@ h1 {
 
 .pad-green {
   border-top-right-radius: 200px;
-  background-color: green;
+  background-color: rgb(2, 77, 2);
 }
 
 .pad-green:hover,
