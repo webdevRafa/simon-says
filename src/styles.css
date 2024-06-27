@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 html {
-  background: url('../assets/background.png') no-repeat center center fixed;
+  background: url('../assets/asset.svg') no-repeat center center fixed;
+  background-color: blue;
   box-sizing: border-box;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,16 +13,14 @@ html {
 }
 
 body {
-  color: yellow;
-  font-family: 'Rubik Microbe', sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   height: 100vh;
-  align-items: center;
+  align-items: center;  
 }
 
 main {
-  background-color: #000000ee;
   padding: 40px;
 }
 
@@ -32,7 +32,9 @@ h1 {
 .game-controls {
   text-align: center;
 }
-
+.js-status {
+  color: white;
+}
 .start-button {
   display: inline-block;
   height: 38px;
@@ -68,31 +70,30 @@ h1 {
 }
 
 .pad-red {
-  border-top-left-radius: 200px;
+  /* border-top-left-radius: 200px; */
   background-color: rgb(155, 12, 12);
 }
 
 .pad-red:hover,
 .pad-red:focus {
   background-color: #ff7b5d;
-  transform: rotate(-5deg);
+  transform: scale(1.1);
 }
 
 .pad-red:active,
 .pad-red.activated {
-  background-color: #ff5c36;
   transform: translateY(10px);
 }
 
 .pad-green {
-  border-top-right-radius: 200px;
+  /* border-top-right-radius: 200px; */
   background-color: rgb(2, 77, 2);
 }
 
 .pad-green:hover,
 .pad-green:focus {
-  background-color: #8cc218;
-  transform: rotate(5deg);
+  background-color: #4d7100;
+  transform: scale(1.1);
 }
 
 .pad-green:active,
@@ -102,14 +103,14 @@ h1 {
 }
 
 .pad-yellow {
-  border-bottom-right-radius: 200px;
+  /* border-bottom-right-radius: 200px; */
   background-color: yellow;
 }
 
 .pad-yellow:hover,
 .pad-yellow:focus {
   background-color: #ffb900;
-  transform: rotate(5deg);
+  transform: scale(1.1);
 }
 
 .pad-yellow:active,
@@ -119,14 +120,14 @@ h1 {
 }
 
 .pad-blue {
-  border-bottom-left-radius: 200px;
+  /* border-bottom-left-radius: 200px; */
   background-color: blue;
 }
 
 .pad-blue:hover,
 .pad-blue:focus {
   background-color: #139ddd;
-  transform: rotate(5deg);
+  transform: scale(1.1);
 }
 
 .pad-blue:active,
@@ -141,4 +142,22 @@ h1 {
 
 .unclickable {
   pointer-events: none;
+}
+.level-selector {
+  display: inline-block;
+  height: 38px;
+  padding: 0 10px;
+  margin-right: 20px;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.level-selector:hover {
+  background-color: #66bb6a;
 }

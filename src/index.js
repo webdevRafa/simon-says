@@ -7,6 +7,7 @@
  const statusSpan = document.querySelector(".js-status"); // Use querySelector() to get the status element
  const heading = document.querySelector(".js-heading"); // Use querySelector() to get the heading element
  const padContainer = document.querySelector(".js-pad-container"); // Use querySelector() to get the heading element
+ const levelSelector = document.querySelector(".js-level-selector");
 
 /**
  * VARIABLES
@@ -83,7 +84,8 @@ startButton.addEventListener("click", startButtonHandler);
  */
 function startButtonHandler() {
   // TODO: Write your code here.
-  maxRoundCount = setLevel();
+  const selectedLevel = parseInt(levelSelector.value);
+  maxRoundCount = setLevel(selectedLevel);
   roundCount = 1;
   startButton.classList.add("hidden");
   statusSpan.classList.remove("hidden");
@@ -206,6 +208,10 @@ function setText(element, text) {
 function activatePad(color) {
   // TODO: Write your code here.
   const pad = pads.find(pad => pad.color === color);
+  const body = document.querySelector("html");
+  const heading = document.querySelector(".js-heading");
+  body.style.backgroundColor = color;
+  heading.style.color = color;
   pad.selector.classList.add("activated");
   pad.sound.play();
   setTimeout(() => {
